@@ -19,7 +19,7 @@ if(isset($_POST['deleteTask']) AND ($_POST['checkbox'])){
     // Archives.json
     $data = file_get_contents('archives.json');
     $array_json = json_decode($data, true);
-    $array_json[] = array('archive', $done);
+    $array_json[] = array('archives', $done);
     file_put_contents('archives.json', json_encode($array_json));
 
     // Supprimer une tâche
